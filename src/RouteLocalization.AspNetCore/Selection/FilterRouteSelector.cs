@@ -63,7 +63,7 @@
 				{
 					ControllerModel = selection.ControllerModel,
 					ActionModels = selection.ActionModels
-						.Where(action => TranslatedRoutesRouteSelector.IsPartiallyTranslatedAction(action, Cultures, Localizer)).ToList()
+						.Where(action => TranslatedRoutesRouteSelector.IsPartiallyTranslatedAction(action, Cultures, Localizer)).ToList(),
 				}).ToList();
 			}
 
@@ -78,7 +78,7 @@
 					ControllerModel = selection.ControllerModel,
 					ActionModels = selection.ActionModels
 						.Where(action => UntranslatedRoutesRouteSelector.IsNotCompletelyTranslatedAction(action, Cultures.Single(),
-							Localizer)).ToList()
+							Localizer)).ToList(),
 				}).ToList();
 			}
 

@@ -7,6 +7,8 @@ root = true
 # Don't use tabs for indentation.
 [*]
 indent_style = tab
+trim_trailing_whitespace = true
+insert_final_newline = false
 # (Please don't specify an indent_size here; that has too many unintended consequences.)
 
 # Code files
@@ -23,6 +25,10 @@ indent_size = 2
 
 # JSON files
 [*.json]
+indent_size = 2
+
+# JS and TS files
+[*.{js,ts}]
 indent_size = 2
 
 # Dotnet code style settings:

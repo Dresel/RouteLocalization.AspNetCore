@@ -28,7 +28,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new TranslatedRoutesRouteSelector()
 			{
 				Cultures = new[] { UntranslatedRoutesRouteSelectorBuilderTest.Culture, UntranslatedRoutesRouteSelectorBuilderTest.Culture2 },
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -57,7 +57,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new TranslatedRoutesRouteSelector()
 			{
 				Cultures = new[] { UntranslatedRoutesRouteSelectorBuilderTest.Culture, UntranslatedRoutesRouteSelectorBuilderTest.Culture2 },
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -86,7 +86,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new TranslatedRoutesRouteSelector()
 			{
 				Cultures = new[] { UntranslatedRoutesRouteSelectorBuilderTest.Culture, UntranslatedRoutesRouteSelectorBuilderTest.Culture2 },
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -115,7 +115,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new TranslatedRoutesRouteSelector()
 			{
 				Cultures = new[] { UntranslatedRoutesRouteSelectorBuilderTest.Culture, UntranslatedRoutesRouteSelectorBuilderTest.Culture2 },
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -162,7 +162,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new TranslatedRoutesRouteSelector()
 			{
 				Cultures = new[] { UntranslatedRoutesRouteSelectorBuilderTest.Culture, UntranslatedRoutesRouteSelectorBuilderTest.Culture2 },
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -201,7 +201,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new TranslatedRoutesRouteSelector()
 			{
 				Cultures = new[] { UntranslatedRoutesRouteSelectorBuilderTest.Culture, UntranslatedRoutesRouteSelectorBuilderTest.Culture2 },
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;

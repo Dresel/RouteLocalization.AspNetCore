@@ -38,7 +38,7 @@
 					HasPartiallyTranslatedActionAttributeRoutes(controller.Actions))).Select(controller => new RouteSelection()
 			{
 				ControllerModel = controller,
-				ActionModels = controller.Actions.Where(IsPartiallyTranslatedAction).ToList()
+				ActionModels = controller.Actions.Where(IsPartiallyTranslatedAction).ToList(),
 			}).ToList();
 		}
 

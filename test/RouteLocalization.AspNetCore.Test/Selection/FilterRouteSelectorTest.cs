@@ -29,19 +29,19 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller1(),
-				ActionModels = TestApplicationModel.Instance.Controller1().Actions
+				ActionModels = TestApplicationModel.Instance.Controller1().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller2(),
-				ActionModels = TestApplicationModel.Instance.Controller2().Actions
+				ActionModels = TestApplicationModel.Instance.Controller2().Actions,
 			});
 
 			FilterRouteSelector filterRouteSelector = new FilterRouteSelector(routeSelector)
 			{
 				Controller = "Controller1",
-				Action = "Action1"
+				Action = "Action1",
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(TestApplicationModel.Instance);
@@ -64,18 +64,18 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller1(),
-				ActionModels = TestApplicationModel.Instance.Controller1().Actions
+				ActionModels = TestApplicationModel.Instance.Controller1().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller2(),
-				ActionModels = TestApplicationModel.Instance.Controller2().Actions
+				ActionModels = TestApplicationModel.Instance.Controller2().Actions,
 			});
 
 			FilterRouteSelector filterRouteSelector = new FilterRouteSelector(routeSelector)
 			{
-				Controller = "Controller1"
+				Controller = "Controller1",
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(TestApplicationModel.Instance);
@@ -97,13 +97,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController2 = applicationModel.Controller2()
@@ -126,7 +126,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoTranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoTranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -148,13 +148,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController = applicationModel.Controller4()
@@ -186,7 +186,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				Action = "Action1",
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoTranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoTranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -209,13 +209,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController = applicationModel.Controller4()
@@ -256,7 +256,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoTranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoTranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -280,13 +280,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController = applicationModel.Controller4()
@@ -322,7 +322,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoTranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoTranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -346,13 +346,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			FilterRouteSelector filterRouteSelector = new FilterRouteSelector(routeSelector)
@@ -362,7 +362,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -386,13 +386,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController = applicationModel.Controller4()
@@ -412,7 +412,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -436,13 +436,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController = applicationModel.Controller4()
@@ -470,7 +470,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -492,13 +492,13 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller4(),
-				ActionModels = applicationModel.Controller4().Actions
+				ActionModels = applicationModel.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = applicationModel.Controller2(),
-				ActionModels = applicationModel.Controller2().Actions
+				ActionModels = applicationModel.Controller2().Actions,
 			});
 
 			ControllerModel translatedController = applicationModel.Controller4()
@@ -521,7 +521,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				ActionArguments = new[] { typeof(int) },
 				Localizer = GetLocalizer(),
 				Cultures = new[] { FilterRouteSelectorTest.Culture },
-				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true
+				FilterControllerOrActionWhenNoUntranslatedRouteLeft = true,
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(applicationModel);
@@ -542,20 +542,20 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller4(),
-				ActionModels = TestApplicationModel.Instance.Controller4().Actions
+				ActionModels = TestApplicationModel.Instance.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller2(),
-				ActionModels = TestApplicationModel.Instance.Controller2().Actions
+				ActionModels = TestApplicationModel.Instance.Controller2().Actions,
 			});
 
 			FilterRouteSelector filterRouteSelector = new FilterRouteSelector(routeSelector)
 			{
 				Controller = "Controller4",
 				Action = "Action1",
-				ActionArguments = new[] { typeof(int) }
+				ActionArguments = new[] { typeof(int) },
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(TestApplicationModel.Instance);
@@ -577,19 +577,19 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller4(),
-				ActionModels = TestApplicationModel.Instance.Controller4().Actions
+				ActionModels = TestApplicationModel.Instance.Controller4().Actions,
 			});
 
 			routeSelector.RouteSelection.Add(new RouteSelection()
 			{
 				ControllerModel = TestApplicationModel.Instance.Controller2(),
-				ActionModels = TestApplicationModel.Instance.Controller2().Actions
+				ActionModels = TestApplicationModel.Instance.Controller2().Actions,
 			});
 
 			FilterRouteSelector filterRouteSelector = new FilterRouteSelector(routeSelector)
 			{
 				Controller = "Controller4",
-				Action = "Action1"
+				Action = "Action1",
 			};
 
 			ICollection<RouteSelection> routeSelections = filterRouteSelector.Select(TestApplicationModel.Instance);

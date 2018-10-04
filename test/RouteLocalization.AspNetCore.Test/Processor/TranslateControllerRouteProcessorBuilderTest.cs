@@ -31,8 +31,8 @@
 			{
 				new RouteSelection()
 				{
-					ControllerModel = applicationModel.Controller1()
-				}
+					ControllerModel = applicationModel.Controller1(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -66,8 +66,8 @@
 				new RouteSelection()
 				{
 					ControllerModel = applicationModel.Controller1(),
-					ActionModels = applicationModel.Controller1().Actions
-				}
+					ActionModels = applicationModel.Controller1().Actions,
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -87,12 +87,12 @@
 			{
 				new RouteSelection()
 				{
-					ControllerModel = applicationModel.Controller1()
+					ControllerModel = applicationModel.Controller1(),
 				},
 				new RouteSelection()
 				{
-					ControllerModel = applicationModel.Controller2()
-				}
+					ControllerModel = applicationModel.Controller2(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -102,7 +102,7 @@
 		{
 			return new TranslateControllerRouteProcessor(new RouteTranslationConfiguration()
 			{
-				Localizer = new DefaultLocalizer("cultureKey")
+				Localizer = new DefaultLocalizer("cultureKey"),
 			});
 		}
 	}

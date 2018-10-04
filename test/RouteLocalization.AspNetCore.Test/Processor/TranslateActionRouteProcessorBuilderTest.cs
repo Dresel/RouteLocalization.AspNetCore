@@ -28,8 +28,8 @@
 				new RouteSelection()
 				{
 					ControllerModel = applicationModel.Controller1(),
-					ActionModels = applicationModel.Controller1().Actions.Take(1).ToList()
-				}
+					ActionModels = applicationModel.Controller1().Actions.Take(1).ToList(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -59,8 +59,8 @@
 				new RouteSelection()
 				{
 					ControllerModel = applicationModel.Controller2(),
-					ActionModels = applicationModel.Controller2().Actions.Take(1).ToList()
-				}
+					ActionModels = applicationModel.Controller2().Actions.Take(1).ToList(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -89,8 +89,8 @@
 				new RouteSelection()
 				{
 					ControllerModel = applicationModel.Controller1(),
-					ActionModels = applicationModel.Controller1().Actions.Skip(1).Take(2).ToList()
-				}
+					ActionModels = applicationModel.Controller1().Actions.Skip(1).Take(2).ToList(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -122,8 +122,8 @@
 			{
 				new RouteSelection()
 				{
-					ControllerModel = applicationModel.Controller1()
-				}
+					ControllerModel = applicationModel.Controller1(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -144,13 +144,13 @@
 				new RouteSelection()
 				{
 					ControllerModel = applicationModel.Controller1(),
-					ActionModels = applicationModel.Controller1().Actions.Take(1).ToList()
+					ActionModels = applicationModel.Controller1().Actions.Take(1).ToList(),
 				},
 				new RouteSelection()
 				{
 					ControllerModel = applicationModel.Controller2(),
-					ActionModels = applicationModel.Controller2().Actions.Take(1).ToList()
-				}
+					ActionModels = applicationModel.Controller2().Actions.Take(1).ToList(),
+				},
 			};
 
 			routeProcessor.Process(routeSelections);
@@ -160,7 +160,7 @@
 		{
 			return new TranslateActionRouteProcessor(new RouteTranslationConfiguration()
 			{
-				Localizer = new DefaultLocalizer("cultureKey")
+				Localizer = new DefaultLocalizer("cultureKey"),
 			});
 		}
 	}

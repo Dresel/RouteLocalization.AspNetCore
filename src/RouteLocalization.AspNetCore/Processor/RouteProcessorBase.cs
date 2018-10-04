@@ -40,7 +40,7 @@
 					new OnTranslatedControllerModelCreatedEventArgs()
 					{
 						OriginalControllerModel = originalControllerModel,
-						TranslatedControllerModel = localizedControllerModel
+						TranslatedControllerModel = localizedControllerModel,
 					});
 			}
 
@@ -72,8 +72,8 @@
 			{
 				AttributeRouteModel =
 				{
-					Template = template
-				}
+					Template = template,
+				},
 			};
 
 			localizedActionModel.Selectors.Add(localizedSelectorModel);
@@ -83,7 +83,7 @@
 				OriginalActionModel = localizedActionModel.GetOriginalModel(RouteTranslationConfiguration.Localizer),
 				LocalizedActionModel = localizedActionModel,
 				OriginalSelectorModel = originalSelectorModel,
-				LocalizedSelectorModel = localizedSelectorModel
+				LocalizedSelectorModel = localizedSelectorModel,
 			});
 		}
 
@@ -109,8 +109,8 @@
 			{
 				AttributeRouteModel =
 				{
-					Template = template
-				}
+					Template = template,
+				},
 			};
 
 			localizedControllerModel.Selectors.Add(localizedSelectorModel);
@@ -120,7 +120,7 @@
 				OriginalControllerModel = localizedControllerModel.GetOriginalModel(RouteTranslationConfiguration.Localizer),
 				LocalizedControllerModel = localizedControllerModel,
 				OriginalSelectorModel = originalSelectorModel,
-				LocalizedSelectorModel = localizedSelectorModel
+				LocalizedSelectorModel = localizedSelectorModel,
 			});
 		}
 

@@ -1,20 +1,15 @@
 ﻿namespace RouteLocalization.AspNetCore.Sample
 {
-	using System.IO;
+	using Microsoft.AspNetCore;
 	using Microsoft.AspNetCore.Hosting;
 
 	public class Program
 	{
+		public static IWebHostBuilder CreateWebHostBuilder(string[] args) => WebHost.CreateDefaultBuilder(args).UseStartup<Startup>();
+
 		public static void Main(string[] args)
 		{
-			IWebHost host =
-				new WebHostBuilder().UseKestrel()
-					.UseContentRoot(Directory.GetCurrentDirectory())
-					.UseIISIntegration()
-					.UseStartup<Startup>()
-					.Build();
-
-			host.Run();
+			CreateWebHostBuilder(args).Build().Run();
 		}
 	}
 }

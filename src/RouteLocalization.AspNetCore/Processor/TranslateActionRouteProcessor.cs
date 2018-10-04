@@ -4,6 +4,7 @@
 	using System.Linq;
 	using Microsoft.AspNetCore.Mvc.ApplicationModels;
 	using Microsoft.Extensions.Logging;
+	using Microsoft.Extensions.Logging.Abstractions;
 	using RouteLocalization.AspNetCore.Selection;
 
 	public class TranslateActionRouteProcessor : RouteProcessorBase
@@ -56,7 +57,7 @@
 			foreach (var originalActionModel in originalActionModels.Select((model, index) => new
 			{
 				Model = model,
-				Index = index
+				Index = index,
 			}))
 			{
 				ActionModel translatedActionModel = translatedActionModels[originalActionModel.Index];

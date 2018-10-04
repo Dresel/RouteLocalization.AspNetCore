@@ -27,7 +27,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new UntranslatedRoutesRouteSelector()
 			{
 				Culture = TranslatedRoutesRouteSelectorBuilderTest.Culture,
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -64,7 +64,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new UntranslatedRoutesRouteSelector()
 			{
 				Culture = TranslatedRoutesRouteSelectorBuilderTest.Culture,
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -93,7 +93,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new UntranslatedRoutesRouteSelector()
 			{
 				Culture = TranslatedRoutesRouteSelectorBuilderTest.Culture,
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -117,7 +117,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new UntranslatedRoutesRouteSelector()
 			{
 				Culture = TranslatedRoutesRouteSelectorBuilderTest.Culture,
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -149,7 +149,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new UntranslatedRoutesRouteSelector()
 			{
 				Culture = TranslatedRoutesRouteSelectorBuilderTest.Culture,
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;
@@ -173,7 +173,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new UntranslatedRoutesRouteSelector()
 			{
 				Culture = TranslatedRoutesRouteSelectorBuilderTest.Culture,
-				Localizer = GetLocalizer()
+				Localizer = GetLocalizer(),
 			};
 
 			ApplicationModel applicationModel = TestApplicationModel.Instance;

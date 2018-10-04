@@ -28,7 +28,7 @@
 			return originalActionModels.Select((model, index) => new
 				{
 					Model = model,
-					Index = index
+					Index = index,
 				})
 				.Any(x => x.Model.Selectors[localizedActionModels[x.Index].Selectors.Count].AttributeRouteModel.Template !=
 					firstUntranslatedTemplate);
@@ -68,7 +68,7 @@
 			return localizedActionModels.Select((model, index) => new
 				{
 					Model = model,
-					Index = index
+					Index = index,
 				})
 				.All(x => x.Model.Selectors.Count > 0);
 		}
@@ -105,7 +105,7 @@
 			return actionModels.Select((model, index) => new IndexedModel<ActionModel>()
 			{
 				Model = model,
-				Index = index
+				Index = index,
 			});
 		}
 

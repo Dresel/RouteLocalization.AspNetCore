@@ -44,13 +44,13 @@
 					new CopyTemplateRouteProcessor(RouteTranslationConfiguration,
 						LoggerFactory.CreateLogger<CopyTemplateRouteProcessor>())
 					{
-						Culture = culture
+						Culture = culture,
 					};
 
 				RouteTranslationStore.Add(new RouteSelectorProcessorPair
 				{
 					Selector = CurrentRouteSelectorFunc(),
-					Processor = routeProcessor
+					Processor = routeProcessor,
 				});
 			}
 
@@ -100,7 +100,7 @@
 					Action = actionName,
 					ActionArguments = actionArguments,
 					Localizer = RouteTranslationConfiguration.Localizer,
-					Cultures = CurrentCultures.ToArray()
+					Cultures = CurrentCultures.ToArray(),
 				};
 
 				if ((previousRouteSelectorFunc as Func<FilterRouteSelector>) != null)
@@ -134,13 +134,13 @@
 			IRouteProcessor routeProcessor = new DisableOriginalRouteProcessor(RouteTranslationConfiguration,
 				LoggerFactory.CreateLogger<DisableOriginalRouteProcessor>())
 			{
-				Cultures = CurrentCultures.ToArray()
+				Cultures = CurrentCultures.ToArray(),
 			};
 
 			RouteTranslationStore.Add(new RouteSelectorProcessorPair
 			{
 				Selector = CurrentRouteSelectorFunc(),
-				Processor = routeProcessor
+				Processor = routeProcessor,
 			});
 
 			return this;
@@ -152,13 +152,13 @@
 				LoggerFactory.CreateLogger<TranslateActionRouteProcessor>())
 			{
 				Culture = CurrentCultures.Single(),
-				Template = template
+				Template = template,
 			};
 
 			RouteTranslationStore.Add(new RouteSelectorProcessorPair
 			{
 				Selector = CurrentRouteSelectorFunc(),
-				Processor = routeProcessor
+				Processor = routeProcessor,
 			});
 
 			return this;
@@ -170,13 +170,13 @@
 				LoggerFactory.CreateLogger<TranslateControllerRouteProcessor>())
 			{
 				Culture = CurrentCultures.Single(),
-				Template = template
+				Template = template,
 			};
 
 			RouteTranslationStore.Add(new RouteSelectorProcessorPair
 			{
 				Selector = CurrentRouteSelectorFunc(),
-				Processor = routeProcessor
+				Processor = routeProcessor,
 			});
 
 			return this;
@@ -248,7 +248,7 @@
 			new TranslatedRoutesRouteSelector()
 			{
 				Cultures = CurrentCultures.ToArray(),
-				Localizer = RouteTranslationConfiguration.Localizer
+				Localizer = RouteTranslationConfiguration.Localizer,
 			});
 
 			return this;
@@ -264,7 +264,7 @@
 			CurrentRouteSelectorFunc = (Func<UntranslatedRoutesRouteSelector>)(() => new UntranslatedRoutesRouteSelector()
 			{
 				Culture = CurrentCultures.Single(),
-				Localizer = RouteTranslationConfiguration.Localizer
+				Localizer = RouteTranslationConfiguration.Localizer,
 			});
 
 			return this;
@@ -275,7 +275,7 @@
 			return new RouteTranslationBuilder<T>(RouteTranslationConfiguration, RouteTranslationStore, LoggerFactory)
 			{
 				CurrentRouteSelectorFunc = CurrentRouteSelectorFunc,
-				CurrentCultures = CurrentCultures
+				CurrentCultures = CurrentCultures,
 			};
 		}
 

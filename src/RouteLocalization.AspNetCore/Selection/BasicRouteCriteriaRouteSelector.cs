@@ -43,7 +43,7 @@
 				.Select(controller => new RouteSelection()
 				{
 					ControllerModel = controller,
-					ActionModels = actionSelector(controller)
+					ActionModels = actionSelector(controller),
 				})
 				.ToList();
 		}

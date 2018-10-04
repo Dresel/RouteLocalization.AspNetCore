@@ -36,7 +36,7 @@
 					HasNotCompletelyTranslatedActionAttributeRoute(controller.Actions))).Select(controller => new RouteSelection()
 			{
 				ControllerModel = controller,
-				ActionModels = controller.Actions.Where(IsNotCompletelyTranslatedAction).ToList()
+				ActionModels = controller.Actions.Where(IsNotCompletelyTranslatedAction).ToList(),
 			}).ToList();
 		}
 

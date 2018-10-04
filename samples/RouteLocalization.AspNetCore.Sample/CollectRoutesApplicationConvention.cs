@@ -13,8 +13,7 @@
 		{
 			foreach (ControllerModel controllerModel in application.Controllers)
 			{
-				string culture;
-				if (!controllerModel.RouteValues.TryGetValue("culture", out culture))
+				if (!controllerModel.RouteValues.TryGetValue("culture", out string culture))
 				{
 					culture = "null";
 				}

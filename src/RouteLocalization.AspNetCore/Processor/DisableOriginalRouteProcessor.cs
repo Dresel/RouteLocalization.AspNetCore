@@ -4,6 +4,7 @@
 	using System.Linq;
 	using Microsoft.AspNetCore.Mvc.ApplicationModels;
 	using Microsoft.Extensions.Logging;
+	using Microsoft.Extensions.Logging.Abstractions;
 	using RouteLocalization.AspNetCore.Selection;
 
 	public class DisableOriginalRouteProcessor : RouteProcessorBase

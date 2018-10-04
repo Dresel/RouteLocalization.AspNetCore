@@ -17,7 +17,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			{
 				Controller = "Controller1",
 				ControllerNamespace = typeof(Controller1).Namespace,
-				Action = "Action1"
+				Action = "Action1",
 			};
 
 			ICollection<RouteSelection> routeSelections = routeSelector.Select(TestApplicationModel.Instance);
@@ -35,7 +35,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			{
 				Controller = "Controller1",
 				ControllerNamespace = typeof(Controller1).Namespace,
-				Action = "Action2"
+				Action = "Action2",
 			};
 
 			ICollection<RouteSelection> routeSelections = routeSelector.Select(TestApplicationModel.Instance);
@@ -56,7 +56,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 				Action = "Action2",
 				ActionArguments = new List<Type>()
 				{
-				}
+				},
 			};
 
 			ICollection<RouteSelection> routeSelections = routeSelector.Select(TestApplicationModel.Instance);
@@ -73,7 +73,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new BasicRouteCriteriaRouteSelector(new DefaultLocalizer())
 			{
 				Controller = "Controller1",
-				ControllerNamespace = typeof(Controller1).Namespace
+				ControllerNamespace = typeof(Controller1).Namespace,
 			};
 
 			ICollection<RouteSelection> routeSelections = routeSelector.Select(TestApplicationModel.Instance);
@@ -89,7 +89,7 @@ namespace RouteLocalization.AspNetCore.Test.Selection
 			IRouteSelector routeSelector = new BasicRouteCriteriaRouteSelector(new DefaultLocalizer())
 			{
 				Controller = "MissingController",
-				ControllerNamespace = typeof(Controller1).Namespace
+				ControllerNamespace = typeof(Controller1).Namespace,
 			};
 
 			ICollection<RouteSelection> routeSelections = routeSelector.Select(TestApplicationModel.Instance);

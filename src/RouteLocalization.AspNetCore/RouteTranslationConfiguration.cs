@@ -37,7 +37,7 @@
 				OnActionRouteTranslated = OnActionRouteTranslated,
 				OnControllerRouteTranslated = OnControllerRouteTranslated,
 				OnTranslatedControllerModelCreated = OnTranslatedControllerModelCreated,
-				ValidateUrl = ValidateUrl
+				ValidateUrl = ValidateUrl,
 			};
 		}
 	}
