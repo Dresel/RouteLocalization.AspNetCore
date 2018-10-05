@@ -30,27 +30,15 @@
 				</button>
 				<a asp-action="Index" asp-area="" asp-controller="Home" class="navbar-brand">RouteLocalization.AspNetCore.Sample</a>
 			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav">
-					<li>
-						<a asp-action="Index" asp-area="" asp-controller="Home">Home</a>
-					</li>
-					<li>
-						<a asp-action="About" asp-area="" asp-controller="Home">About</a>
-					</li>
-					<li>
-						<a asp-action="Contact" asp-area="" asp-controller="Home">Contact</a>
-					</li>
-				</ul>
-			</div>
 		</div>
 	</nav>
-
-	<partial name="_CookieConsentPartial" />
 
 	<div class="body-content container">
 		@RenderBody()
 		<hr />
+		<p>
+			<strong>Route information:</strong>
+		</p>
 		<div>
 			<div>Current Culture: @(Context.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name)</div>
 			<div>Current localized Route: @Url.RouteUrl(ViewContext.RouteData.Values)</div>
@@ -75,6 +63,7 @@
 				<div>German (de) version of this route: <a href="@Url.RouteUrl(routeValueDictionaryDE)">@(Url.RouteUrl(routeValueDictionaryDE) ?? "[null]")</a>
 				</div>
 			}
+			<br />
 			<p>
 				<strong>All discovered Routes:</strong>
 			</p>

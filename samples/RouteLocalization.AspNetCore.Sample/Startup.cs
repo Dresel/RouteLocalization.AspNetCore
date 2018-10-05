@@ -47,21 +47,13 @@
 			});
 
 			app.UseStaticFiles();
-			app.UseCookiePolicy();
 
-			app.UseMvc();
+			app.UseMvcWithDefaultRoute();
 		}
 
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-			services.Configure<CookiePolicyOptions>(options =>
-			{
-				// This lambda determines whether user consent for non-essential cookies is needed for a given request.
-				options.CheckConsentNeeded = context => true;
-				options.MinimumSameSitePolicy = SameSiteMode.None;
-			});
-
 			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 			services.AddLocalization();
@@ -69,9 +61,9 @@
 			services.AddRouteLocalization(setup =>
 			{
 				setup.UseCulture("de")
-
-					//.WhereController<HomeController>()
-					//.WhereAction(action => action.Index(RouteLocalization.AspNetCore.With.Any<int>()))
+					//// Alternative selection
+					////.WhereController<HomeController>()
+					////.WhereAction(action => action.Index(With.Any<int>()))
 					.WhereController(nameof(HomeController))
 					.WhereAction(nameof(HomeController.Index))
 					.TranslateAction("Willkommen");
