@@ -8,7 +8,7 @@
 		<PackageProjectUrl>https://github.com/Dresel/RouteLocalization.AspNetCore</PackageProjectUrl>
 		<PackageLicenseUrl>https://github.com/Dresel/RouteLocalization.AspNetCore/blob/master/LICENSE</PackageLicenseUrl>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/Dresel/RouteLocalization.git</RepositoryUrl>
+		<RepositoryUrl>https://github.com/Dresel/RouteLocalization.AspNetCore.git</RepositoryUrl>
 		<Authors>Christopher Dresel</Authors>
 		<Company>Christopher Dresel</Company>
 		<PackageOutputPath>..\..\.nuget\packages\RouteLocalization.AspNetCore</PackageOutputPath>
