@@ -1,11 +1,12 @@
 # RouteLocalization.AspNetCore
+
 An ASP.NET Core MVC package that simplifies route localization of attribute routes.
 
 [![Build status](https://dev.azure.com/dresel/RouteLocalization.AspNetCore/_apis/build/status/RouteLocalization.AspNetCore-CI?branchName=development)](https://dev.azure.com/dresel/RouteLocalization.AspNetCore/_build/latest?definitionId=13)
 
 ## Nuget
 
-    Install-Package RouteLocalization.AspNetCore -Pre
+    Install-Package RouteLocalization.AspNetCore
 
 ## Documentation
 
