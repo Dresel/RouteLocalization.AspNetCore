@@ -5,6 +5,9 @@
 
 	public class RouteLocalizationConvention : IApplicationModelConvention
 	{
+		private static readonly object LockObject = new object();
+		private static bool initialized;
+
 		public RouteLocalizationConvention(RouteTranslator routeTranslator, IOptions<RouteTranslatorOptions> routeTranslatorOptions)
 		{
 			RouteTranslator = routeTranslator;
@@ -17,8 +20,15 @@
 
 		public void Apply(ApplicationModel application)
 		{
-			RouteTranslatorOptions.RouteTranslatorAction(RouteTranslator);
-			RouteTranslator.Apply(application);
+			lock(LockObject)
+			{
+				if(!initialized)
+				{
+					initialized = true;
+					RouteTranslatorOptions.RouteTranslatorAction(RouteTranslator);
+					RouteTranslator.Apply(application);
+				}
+			}
 		}
 	}
 }
