@@ -7,17 +7,19 @@
 
 	public class RouteTranslator
 	{
-		public RouteTranslator(IOptions<RouteTranslationConfiguration> routeTranslationConfiguration)
+		public RouteTranslator(IOptions<RouteTranslationConfiguration> routeTranslationConfiguration,
+			IOptions<RouteTranslatorOptions> routeTranslatorOptions)
+			: this(routeTranslationConfiguration, routeTranslatorOptions, NullLoggerFactory.Instance)
 		{
-			RouteTranslationConfiguration = routeTranslationConfiguration.Value;
-			LoggerFactory = NullLoggerFactory.Instance;
 		}
 
 		public RouteTranslator(IOptions<RouteTranslationConfiguration> routeTranslationConfiguration,
-			ILoggerFactory loggerFactory)
+			IOptions<RouteTranslatorOptions> routeTranslatorOptions, ILoggerFactory loggerFactory)
 		{
 			RouteTranslationConfiguration = routeTranslationConfiguration.Value;
 			LoggerFactory = loggerFactory;
+
+			routeTranslatorOptions.Value.RouteTranslatorAction(this);
 		}
 
 		public RouteTranslationConfiguration RouteTranslationConfiguration { get; set; }

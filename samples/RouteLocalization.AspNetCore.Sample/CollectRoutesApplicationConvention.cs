@@ -11,6 +11,8 @@
 
 		public void Apply(ApplicationModel application)
 		{
+			List<string> routes = new List<string>();
+
 			foreach (ControllerModel controllerModel in application.Controllers)
 			{
 				if (!controllerModel.RouteValues.TryGetValue("culture", out string culture))
@@ -32,17 +34,19 @@
 
 					if (controllerModel.Actions.Any(action => action.Selectors.All(selector => selector.AttributeRouteModel == null)))
 					{
-						Routes.AddRange(controllerTemplates.Select(template => $"/{template} [culture:{culture}]"));
+						routes.AddRange(controllerTemplates.Select(template => $"/{template} [culture:{culture}]"));
 					}
 
-					Routes.AddRange(controllerTemplates.SelectMany(actionSelector => actionTemplates,
+					routes.AddRange(controllerTemplates.SelectMany(actionSelector => actionTemplates,
 						(controllerSelector, actionSelector) => $"/{controllerSelector}/{actionSelector} [culture:{culture}]"));
 				}
 				else
 				{
-					Routes.AddRange(actionTemplates.Select(template => $"/{template} [culture:{culture}]"));
+					routes.AddRange(actionTemplates.Select(template => $"/{template} [culture:{culture}]"));
 				}
 			}
+
+			Routes = routes;
 		}
 	}
 }
